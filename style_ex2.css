@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.flex_container{
+    height: 100vh;
+    width:100%;
+}
+.headerUp{
+    display: flex;
+    justify-content: space-between;
+    height: 7rem;
+    align-items: center;
+}
+.headerUp_left{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+.logo{
+    height: 3rem;
+}
+
+/*-------- Header Navs ----*/
+a{
+    text-decoration: none;
+    display: flex; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+}
+li:hover > *{
+    color:rgb(53, 45, 45);
+}
+a,i{
+    color: rgb(158, 154, 154);
+    margin: 3%;
+}
+ul{
+    list-style: none;
+}
+li{
+    padding:3%;
+    display: flex;
+    transition: color .6s;
+}
+.headerUp_left_menu{
+    display: flex;
+    align-items: center;
+}
+.headerUp_left_menuNav{
+    display: flex;   
+}
+.headerUp_right{
+    margin-right: 4%;
+}
+
+/*-------- Header Low----*/
+
+.headerLow_container{
+    position: relative;
+}
+.headerLow_phrase{
+    position: absolute;
+    opacity: 28%;
+    background-color: rgb(175, 172, 172);
+    top: 43%;
+    left: 1%;
+    width: 97%;
+    height: 5rem;
+    text-align: center;
+}
+.headerLow_burger{
+    display: none;
+}
+h2{
+    color: rgb(133, 15, 15);
+    font-size: xx-large;     
+}
+.headerUp_right_navSocialGroup{
+
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+}
+.nav_social{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* -----Contenido Main-------*/
+.main_container{
+    background-color: rgb(199, 184, 184);
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+}
+.article_card{
+    display: flex;
+    border:.2rem solid lightgrey;
+    width:49%;
+    margin:.5%;
+}
+
+.article_card img{
+    width:100%;
+    _height: 100%;
+}
+/*--------Footer-------------*/
+.foot_container{
+    background-color: black;
+    color: antiquewhite;
+    text-align: center;
+    font-size: small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/*------  Queries -----------*/
+
+@media screen and (max-width:758px){
+    .article_card{
+        width: 100%;
+    }       
+    .headerLow_phrase , .headerUp_left_logo , .headerUp_right{
+        display: none;
+    }
+    .headerUp{
+        height: 3rem;
+    }
+    .headerUp_left {
+        display: flex;
+        justify-content: flex-start;
+        width: 50%;         
+        flex: 1;
+    }
+    .headerUp_left_menu{
+        width: 78%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 458px){
+    .headerUp_left_menu nav{
+        display: flex;
+        flex-direction: column;
+    }
+    .headerUp{
+        display: none;
+    }
+    .headerUp_left{
+        display: none;
+    }
+    .headerLow_burger{
+        display:inline;
+    }
+}

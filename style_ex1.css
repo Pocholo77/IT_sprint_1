@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin:0;
+}
+.flex_container{
+    height:100vh;
+}
+header{
+    background-color: black;
+    display:flex;  
+    flex-direction: column;
+    justify-content: center;
+    padding: 1%;
+     
+}
+.header_logo{
+    background-color:rgb(89, 89, 97);
+    justify-content: space-around;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    margin:.5%;
+}
+.header_logo_box{
+    background-color: brown;
+    height: 50%;
+    width:10%;
+    margin:1%
+}
+.header_logo_box_large{
+    background-color: brown;
+    height: 50%;
+    width:80%;
+    margin:1% ;
+}
+.header_nav{
+    background-color:rgb(211, 93, 14);
+    justify-content: space-around;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    margin:.5%;  
+}
+.header_nav_box{
+    background-color: rgb(252, 197, 16);
+    height: 50%;
+    width:100%;
+    margin:1%
+}
+.main_container{
+    display: flex;
+    background-color: black;
+    padding: 1%;
+}
+main{
+    background-color: rgb(101, 123, 141);
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin: .5%;;
+}
+.main_box{
+    background-color: rgb(3, 101, 247);
+    height:1rem;
+    width:46%;
+    margin:2%;
+}
+.main_box_large{
+    background-color: rgb(46, 188, 213);
+    height:1rem;
+    width:96%;
+    margin:1%;
+}
+aside{
+    background-color: rgb(238, 3, 23);
+    width:20%;
+    margin: .5%;
+    display:flex;
+    align-items: center;
+    flex-direction: column;   
+}
+.aside_box{
+    background-color: yellow;
+    height: 1rem;
+    width:90% ;
+    margin: 3%;
+}
+footer{
+    background-color: black ;
+    width:100%;
+    height:2rem;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+   
+}
+.footer_box{
+    background-color: rgb(252, 197, 16);
+    height: 50%;
+    width:100%;
+    margin:1.5%
+}
+
+@media screen and (max-width: 768px) {
+  
+    .main_container{
+        flex-direction: column;
+        background-color: yellow;
+        padding: 2%;
+    }
+    aside{
+        width:100%;
+    }
+    main{
+        flex-direction: column;
+    }
+    .main_box_large , .main_box{
+        width:90%;
+    }   
+}
+
+@media screen and (max-width: 458px){
+    .header_logo{ 
+        flex-direction: column;
+        _flex-wrap: wrap;  
+        height: 4rem;
+    }
+    .header_logo>*{
+        background-color: brown;
+        width:96%;
+        height:30%;
+        margin:1%;
+    }
+    .nav_box, .aside_box{
+        width: 90%;
+    }
+    .footer_box{
+        width: 96%;
+    }
+}
